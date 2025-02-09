@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Feed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #0066cc;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            width: 90%;
+        }
+
+        .pose-section {
+            flex: 1;
+            text-align: center;
+        }
+
+        .pose-section img {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .pose-section h2 {
+            font-size: 18px;
+            color: #444;
+        }
+
+        .video-section {
+            flex: 2;
+            text-align: center;
+        }
+
+        .video-section img {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Live Yoga Pose Correction</h1>
+    <div class="container">
+        <!-- Pose Section -->
+        <div class="pose-section">
+            <img src="{% static 'images/' %}{{ pose_name }}.jpg" alt="{{ pose_name }}">
+            <h2>Selected Pose: {{ pose_name }}</h2>
+        </div>
+
+        <!-- Video Feed Section -->
+        <div class="video-section">
+            <img src="{% url 'video_feed_stream' %}" alt="Live Video Feed">
+        </div>
+    </div>
+</body>
+</html>
+
+

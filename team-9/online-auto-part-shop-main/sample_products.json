@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "LED Headlight Bulbs",
+      "price": 2999,
+      "original_price": 4999,
+      "discount": 40,
+      "image_url": "https://m.media-amazon.com/images/I/71cjfLN0+EL._AC_UY218_.jpg",
+      "category": "Lamp Bulb DRL's",
+      "rating": 4.5,
+      "reviews": 128
+    },
+    {
+      "id": 2,
+      "name": "Car Floor Mats",
+      "price": 1499,
+      "original_price": 2999,
+      "discount": 50,
+      "image_url": "https://m.media-amazon.com/images/I/81K4gEZjy3L._AC_UY218_.jpg",
+      "category": "Interior",
+      "rating": 4.2,
+      "reviews": 256
+    },
+    {
+      "id": 3,
+      "name": "Brake Pads Set",
+      "price": 899,
+      "original_price": 1499,
+      "discount": 40,
+      "image_url": "https://m.media-amazon.com/images/I/71MG8HKU9tL._AC_UY218_.jpg",
+      "category": "Brake Parts",
+      "rating": 4.7,
+      "reviews": 89
+    },
+    {
+      "id": 4,
+      "name": "Car Phone Mount",
+      "price": 599,
+      "original_price": 999,
+      "discount": 40,
+      "image_url": "https://m.media-amazon.com/images/I/61YNBr9KPQL._AC_UY218_.jpg",
+      "category": "Electronics",
+      "rating": 4.3,
+      "reviews": 445
+    },
+    {
+      "id": 5,
+      "name": "Car Vacuum Cleaner",
+      "price": 1999,
+      "original_price": 3999,
+      "discount": 50,
+      "image_url": "https://m.media-amazon.com/images/I/61E7TDKXBQL._AC_UY218_.jpg",
+      "category": "Tools and Garage",
+      "rating": 4.1,
+      "reviews": 167
+    }
+  ],
+  "offers": [
+    {
+      "id": 1,
+      "title": "Summer Sale",
+      "description": "Up to 50% off on all car accessories",
+      "image_url": "https://example.com/summer-sale.jpg"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Essential Car Maintenance Tips",
+      "content": "Regular maintenance can extend your car's life...",
+      "image_url": "https://example.com/maintenance.jpg",
+      "date": "2023-08-15"
+    }
+  ]
+}

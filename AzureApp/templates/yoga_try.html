@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pose Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #0066cc;
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: #444;
+        }
+
+        div {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        select {
+            margin-left: 10px;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .pose-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; 
+        }
+
+        .pose-option {
+            margin: 10px;
+            text-align: center;
+        }
+
+        .pose-option img {
+            max-width: 150px; /* Adjust image size as needed */
+        }
+
+        .pose-option button {
+            display: block;
+            margin-top: 5px; 
+        }
+    </style>
+    
+    
+</head>
+<body>
+    
+    <h1>Select a Yoga Pose</h1>
+    <form method="POST" action="{% url 'video_feed' %}">
+        {% csrf_token %}
+        <div class="pose-container">
+            
+            <div class="pose-item">
+                <label>
+                    <img src="{% static 'images/pranamasana.jpg' %}" alt="Pranamasana">
+                    <br>
+                    <input type="radio" name="pose_name" value="pranamasana">
+                    Pranamasana
+                </label>
+            </div>
+
+            <div class="pose-item">
+                <label>
+                    <img src="{% static 'images/hastapadasana.jpg' %}" alt="Hastapadasana">
+                    <br>
+                    <input type="radio" name="pose_name" value="hastapadasana">
+                    Hastapadasana
+                </label>
+            </div>
+
+            <div class="pose-item">
+                <label>
+                    <img src="{% static 'images/adho_mukha_svanasana.jpg' %}" alt="Adho Mukha Svanasana">
+                    <br>
+                    <input type="radio" name="pose_name" value="adho_mukha_svanasana" required>
+                    Adho Mukha Svanasana
+                </label>
+            </div>
+            <div class="pose-item">
+                <label>
+                    <img src="{% static 'images/left_ashwa_sanchalanasana.jpg' %}" alt="Left Ashwa Sanchalanasana">
+                    <br>
+                    <input type="radio" name="pose_name" value="left_ashwa_sanchalanasana">
+                    Left Ashwa Sanchalanasana
+                </label>
+            </div>
+            
+            <div class="pose-item">
+                <label>
+                    <img src="{% static 'images/right_ashwa_sanchalanasana.jpg' %}" alt="Right Ashwa Sanchalanasana" width="200px">
+                    <br>
+                    <input type="radio" name="pose_name" value="right_ashwa_sanchalanasana">
+                    Right Ashwa Sanchalanasana
+                </label>
+            </div>
+            
+            <div class="pose-item">
+                <label>
+                    <img src="{% static 'images/bhujangasana.png' %}" alt="Bhujangasana">
+                    <br>
+                    <input type="radio" name="pose_name" value="bhujangasana">
+                    Bhujangasana
+                </label>
+            </div>
+            <!-- <div class="pose-item">
+                <label>
+                    <img src="{% static 'images/ashtanga_namaskara.png' %}" alt="Ashtanga Namaskara">
+                    <br>
+                    <input type="radio" name="pose_name" value="ashtanga_namaskara">
+                    Ashtanga Namaskara
+                </label>
+            </div>
+            
+            <div class="pose-item">
+                <label>
+                    <img src="{% static 'images/dandasana.jpg' %}" alt="Dandasana">
+                    <br>
+                    <input type="radio" name="pose_name" value="dandasana">
+                    Dandasana
+                </label>
+            </div> -->
+            
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
